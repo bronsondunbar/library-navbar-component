@@ -1,6 +1,6 @@
 {
   "name": "library-navbar-component",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Navbar component for React",
   "main": "./lib/Navbar.js",
   "license": "MIT",
@@ -28,7 +28,5 @@
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.14"
   },
-  "dependencies": {
-    "react-router-dom": "^4.3.1"
-  }
+  "dependencies": {}
 }

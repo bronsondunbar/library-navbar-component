@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
 import classNames from 'classnames'
 
 import './style.css'
+
+import React, { Fragment } from 'react'
+import classNames from 'classnames'
 
 const NavbarComponent = ({ navBarData, navBarBrand, navBarTheme, navBarContent, showNavBarContent, hideNavBarContent, showNavBarOptions, hideNavBarOptions }) => {
 
@@ -26,7 +28,7 @@ const NavbarComponent = ({ navBarData, navBarBrand, navBarTheme, navBarContent, 
         <a
           href="#"
           className="navbar-content-close"
-          onClick={(event) => hideNavBarContent(event)}>
+          onClick={!hideNavBarContent ? null : (event) => hideNavBarContent(event)}>
           <i className="fas fa-times"></i>
         </a>
 
@@ -46,11 +48,11 @@ const NavbarComponent = ({ navBarData, navBarBrand, navBarTheme, navBarContent, 
               ? data.items.map((data, index) => {
                   return (
                     <li key={index} className="nav-item">
-                        <Link
+                        <a
                           className="nav-link"
-                          to={data.route} >
+                          href={data.route} >
                             {data.name}
-                        </Link>
+                        </a>
                     </li>
                   )
                 })
@@ -65,15 +67,15 @@ const NavbarComponent = ({ navBarData, navBarBrand, navBarTheme, navBarContent, 
               <a
                 href="#"
                 className="navbar-toggle hidden-sm"
-                onClick={(event) => showNavBarContent(event)}>
+                onClick={!showNavBarContent ? null : (event) => showNavBarContent(event)}>
                 <i className="fas fa-bars"></i>
               </a>
-              <Link key={index} className="navbar-brand" to={data.route}>
+              <a key={index} className="navbar-brand" href={data.route}>
                 {navBarBrand &&
                   <img src={navBarBrand} width="30" height="30" className="d-inline-block align-top" />
                 }
                 {data.name}
-              </Link>
+              </a>
             </Fragment>
           )
         })}
@@ -89,22 +91,22 @@ const NavbarComponent = ({ navBarData, navBarBrand, navBarTheme, navBarContent, 
                             ? <a
                                 href="#"
                                 className="nav-link dropdown-toggle"
-                                onMouseEnter={(event) => showNavBarOptions(event)} >
+                                onMouseEnter={!showNavBarOptions ? null : (event) => showNavBarOptions(event)} >
                                   {data.name}
                               </a>
-                            : <Link
+                            : <a
                                 className="nav-link"
-                                to={data.route}
-                                onMouseEnter={(event) => showNavBarOptions(event)} >
+                                href={data.route}
+                                onMouseEnter={!showNavBarOptions ? null : (event) => showNavBarOptions(event)} >
                                   {data.name}
-                              </Link>}
+                              </a>}
                           <div
                             className="dropdown-menu"
-                            onMouseLeave={(event) => hideNavBarOptions(event)}>
+                            onMouseLeave={!hideNavBarOptions ? null : (event) => hideNavBarOptions(event)}>
                             {data.items != undefined
                               ? data.items.map((data, index) => {
                                   return (
-                                    <Link className="dropdown-item" to="#">{data.name}</Link>
+                                    <a className="dropdown-item" href="#">{data.name}</a>
                                   )
                                 })
                               : null}
