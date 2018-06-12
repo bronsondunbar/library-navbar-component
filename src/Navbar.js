@@ -3,9 +3,6 @@ import classNames from 'classnames'
 
 import './style.css'
 
-import React, { Fragment } from 'react'
-import classNames from 'classnames'
-
 const NavbarComponent = ({ navBarData, navBarBrand, navBarTheme, navBarContent, showNavBarContent, hideNavBarContent, showNavBarOptions, hideNavBarOptions }) => {
 
   let navBarClass = classNames({
