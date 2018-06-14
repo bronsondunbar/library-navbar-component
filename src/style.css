@@ -7160,31 +7160,53 @@ a.text-dark:hover, a.text-dark:focus {
 .navbar-brand img {
   margin: 0 15px 0 0; }
 
-.bg-light .navbar-toggle {
-  color: #262626;
-  transition: all 0.3s;
-  margin: 0 15px 0 0; }
-  .bg-light .navbar-toggle:hover, .bg-light .navbar-toggle:focus {
-    color: black; }
-
-.bg-light .navbar-nav .nav-link {
-  color: #262626; }
-
-.bg-light .dropdown-menu {
+.navbar-bg-light {
   background: #f8f9fa; }
-  .bg-light .dropdown-menu .dropdown-item {
-    color: #262626 !important; }
+  .navbar-bg-light .navbar-toggle {
+    color: #262626;
+    transition: all 0.3s;
+    margin: 0 15px 0 0; }
+    .navbar-bg-light .navbar-toggle:hover, .navbar-bg-light .navbar-toggle:focus {
+      color: black; }
+  .navbar-bg-light .navbar-nav .nav-link {
+    color: #262626; }
+  .navbar-bg-light .dropdown-menu {
+    background: #f8f9fa; }
+    .navbar-bg-light .dropdown-menu .dropdown-item {
+      color: #262626 !important; }
+      .navbar-bg-light .dropdown-menu .dropdown-item .active {
+        background: #ffd100;
+        color: #262626; }
+      .navbar-bg-light .dropdown-menu .dropdown-item:active {
+        background: #ffd100;
+        color: #262626 !important; }
+      .navbar-bg-light .dropdown-menu .dropdown-item:hover, .navbar-bg-light .dropdown-menu .dropdown-item:focus {
+        background: #ffd100;
+        color: #262626 !important; }
 
-.bg-dark {
+.navbar-bg-dark {
   background-color: #262626 !important; }
-  .bg-dark .navbar-toggle {
+  .navbar-bg-dark .navbar-toggle {
     color: #ffffff;
     transition: all 0.3s;
     margin: 0 15px 0 0; }
-    .bg-dark .navbar-toggle:hover, .bg-dark .navbar-toggle:focus {
+    .navbar-bg-dark .navbar-toggle:hover, .navbar-bg-dark .navbar-toggle:focus {
       color: #cccccc; }
-  .bg-dark .navbar-nav .nav-link {
+  .navbar-bg-dark .navbar-nav .nav-link {
     color: #ffffff; }
+  .navbar-bg-dark .dropdown-menu {
+    background: #262626; }
+    .navbar-bg-dark .dropdown-menu .dropdown-item {
+      color: #ffffff !important; }
+      .navbar-bg-dark .dropdown-menu .dropdown-item .active {
+        background: #ffd100;
+        color: #262626; }
+      .navbar-bg-dark .dropdown-menu .dropdown-item:active {
+        background: #ffd100;
+        color: #262626 !important; }
+      .navbar-bg-dark .dropdown-menu .dropdown-item:hover, .navbar-bg-dark .dropdown-menu .dropdown-item:focus {
+        background: #ffd100;
+        color: #262626 !important; }
 
 .navbar-content {
   position: fixed;

@@ -1,6 +1,6 @@
 {
   "name": "library-navbar-component",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Navbar component for React",
   "main": "./lib/Navbar.js",
   "license": "MIT",
